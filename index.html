@@ -295,16 +295,91 @@ background-color: #FF6600
     -webkit-font-smoothing: antialiased;
   }
 
-div.cursor {
+div.cursorL {
     display: inline-block;
     background: #111;
     margin-left: 1px;
 
-    -webkit-animation: blink 2s linear 0s infinite;
-    -moz-animation: blink 2s linear 0s infinite;
-    -ms-animation: blink 2s linear 0s infinite;
-    -o-animation: blink 2s linear 0s infinite;
+    -webkit-animation: blinkL 2s linear 0s infinite;
+    -moz-animation: blinkL 2s linear 0s infinite;
+    -ms-animation: blinkL 2s linear 0s infinite;
+    -o-animation: blinkL 2s linear 0s infinite;
   }
+
+  div.cursorR {
+      display: inline-block;
+      background: #111;
+      margin-left: 1px;
+  
+      -webkit-animation: blinkR 2s linear 0s infinite;
+      -moz-animation: blinkR 2s linear 0s infinite;
+      -ms-animation: blinkR 2s linear 0s infinite;
+      -o-animation: blinkR 2s linear 0s infinite;
+    }
+
+  @-webkit-keyframes blinkL {
+    0%   { background: #0a0 }
+    47%  { background: #000 }
+    50%  { background: #000 }
+    80%  { background: #090 }
+    100% { background: #090 }
+}
+
+@-moz-keyframes blinkL {
+  0%   { background: #0a0 }
+  47%  { background: #000 }
+  50%  { background: #000 }
+  80%  { background: #090 }
+  100% { background: #090 }
+}
+
+@-ms-keyframes blinkL {
+  0%   { background: #0a0 }
+  47%  { background: #000 }
+  50%  { background: #000 }
+  80%  { background: #090 }
+  100% { background: #090 }
+}
+
+@-o-keyframes blinkL {
+  0%   { background: #0a0 }
+  47%  { background: #000 }
+  50%  { background: #000 }
+  80%  { background: #090 }
+  100% { background: #090 }
+}
+
+@-webkit-keyframes blinkR {
+0%   { background: #090 }
+47%  { background: #000 }
+50%  { background: #000 }
+97%  { background: #090 }
+100% { background: #0a0 }
+}
+
+@-moz-keyframes blinkR {
+  0%   { background: #090 }
+  47%  { background: #000 }
+  50%  { background: #000 }
+  97%  { background: #090 }
+  100% { background: #0a0 }
+}
+
+@-ms-keyframes blinkR {
+  0%   { background: #090 }
+  47%  { background: #000 }
+  50%  { background: #000 }
+  97%  { background: #090 }
+  100% { background: #0a0 }
+}
+
+@-o-keyframes blinkR {
+  0%   { background: #090 }
+  47%  { background: #000 }
+  50%  { background: #000 }
+  97%  { background: #090 }
+  100% { background: #0a0 }
+}
 
 header span.dim {
   color: #090;
@@ -359,10 +434,10 @@ p.forifr {
   <script src="https://yastatic.net/q/forms-frontend-ext/_/embed.js"></script>
 
   <center>
-    <span class="dim">>: welcome to mind IDE team</span>
-    <div class="cursor"><:</div>
+    <div class="cursorL">>:</div><span class="dim"> welcome to mind IDE team</span>
+    <div class="cursorR"><:</div>
     <br/>
-    <marquee bgcolor="#02bb0b">Connect to the Mind state like a console</marquee>
+    <marquee bgcolor="#02bb0b">connect to the Mind State like to a terminal</marquee>
   </center>
   <br/>
   <div id="text">
